@@ -7,7 +7,7 @@ rpm -ivh nginx-1.11.12-1.el5.ngx.src.rpm
 OUTPUT_DIR=/usr/src/redhat
 NGINX_SPEC=$OUTPUT_DIR/SPECS/nginx.spec
 NGINX_VERSION=1.15.2
-OPENSSL=1.0.2o
+OPENSSL=1.1.0i
 OPENSSL_DIR=/usr/src
 
 wget https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -O $OUTPUT_DIR/SOURCES/nginx-$NGINX_VERSION.tar.gz
