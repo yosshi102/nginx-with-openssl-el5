@@ -1,1 +1,6 @@
+BUILD/*
+RPMS/*
+SOURCES/*
+SPECS/*
+x86/*
 x86_64/*
