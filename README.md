@@ -4,8 +4,8 @@ This creates an nginx rpm file containing openssl for centos 5.
 
 ## target
 
-    nginx 1.15.6
-    openssl 1.1.1
+    nginx 1.15.7
+    openssl 1.1.1a
 
 ## require
 
