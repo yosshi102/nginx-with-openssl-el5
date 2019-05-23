@@ -1,13 +1,11 @@
 #!/bin/bash
 
-wget --no-check-certificate https://nginx.org/packages/mainline/centos/5/SRPMS/nginx-1.11.12-1.el5.ngx.src.rpm
-rpm -ivh nginx-1.11.12-1.el5.ngx.src.rpm
-
+source /opt/rh/devtoolset-2/enable
 
 OUTPUT_DIR=/usr/src/redhat
 NGINX_SPEC=$OUTPUT_DIR/SPECS/nginx.spec
-NGINX_VERSION=1.15.8
-OPENSSL=1.1.1a
+NGINX_VERSION=1.17.0
+OPENSSL=1.1.1b
 OPENSSL_DIR=/usr/src
 
 wget --no-check-certificate https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -O $OUTPUT_DIR/SOURCES/nginx-$NGINX_VERSION.tar.gz

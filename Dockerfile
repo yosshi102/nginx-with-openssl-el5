@@ -21,3 +21,9 @@ RUN cd /usr/src/perl-${PERL_VERSION} && \
     make && \
     make install
 RUN perl -v
+
+RUN wget --no-check-certificate https://nginx.org/packages/mainline/centos/5/SRPMS/nginx-1.11.12-1.el5.ngx.src.rpm
+RUN rpm -ivh nginx-1.11.12-1.el5.ngx.src.rpm
+
+RUN wget http://people.centos.org/tru/devtools-2/devtools-2.repo -O /etc/yum.repos.d/devtools-2.repo
+RUN yum install -y devtoolset-2-gcc devtoolset-2-binutils devtoolset-2-gcc-c++ devtoolset-2-gcc-gfortran
