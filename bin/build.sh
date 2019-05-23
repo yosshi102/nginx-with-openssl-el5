@@ -2,7 +2,7 @@
 
 OUTPUT_DIR=/usr/src/redhat
 NGINX_SPEC=$OUTPUT_DIR/SPECS/nginx.spec
-NGINX_VERSION=1.15.8
+NGINX_VERSION=1.15.12
 OPENSSL=1.1.1a
 OPENSSL_DIR=/usr/src
 
@@ -12,7 +12,7 @@ wget https://www.openssl.org/source/openssl-$OPENSSL.tar.gz -O $OPENSSL_DIR/open
 tar xvzf $OPENSSL_DIR/openssl-$OPENSSL.tar.gz -C $OPENSSL_DIR
 
 sed -i "s|main_version 1.11.12|main_version $NGINX_VERSION|g " $NGINX_SPEC
-sed -i "s|WITH_LD_OPT |WITH_LD_OPT -march=i686 |g " $NGINX_SPEC
+sed -i "s|WITH_LD_OPT |WITH_LD_OPT -m32 -march=i686 |g " $NGINX_SPEC
 
 sed -i "s|--with-http_ssl_module|--with-http_ssl_module --with-openssl=$OPENSSL_DIR/openssl-$OPENSSL --with-openssl-opt=-fpic|g" $NGINX_SPEC
 
