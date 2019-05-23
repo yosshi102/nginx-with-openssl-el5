@@ -21,3 +21,7 @@ RUN cd /usr/src/perl-${PERL_VERSION} && \
     make && \
     make install
 RUN perl -v
+RUN yum install -y glibc-devel.i386 setarch 
+
+RUN wget --no-check-certificate https://nginx.org/packages/mainline/centos/5/SRPMS/nginx-1.11.12-1.el5.ngx.src.rpm
+RUN rpm -ivh nginx-1.11.12-1.el5.ngx.src.rpm
