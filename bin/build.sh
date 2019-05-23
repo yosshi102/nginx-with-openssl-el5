@@ -2,8 +2,8 @@
 
 OUTPUT_DIR=/usr/src/redhat
 NGINX_SPEC=$OUTPUT_DIR/SPECS/nginx.spec
-NGINX_VERSION=1.15.12
-OPENSSL=1.1.1a
+NGINX_VERSION=1.17.0
+OPENSSL=1.1.1b
 OPENSSL_DIR=/usr/src
 
 wget --no-check-certificate https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -O $OUTPUT_DIR/SOURCES/nginx-$NGINX_VERSION.tar.gz
